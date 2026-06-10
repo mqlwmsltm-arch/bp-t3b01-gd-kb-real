@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앗, Llama 3.1 8B에서 발견된 &#39;치명적인 녀석&#39; RoPE theta 튜닝의 미스터리… 🤯</title>
+  <link rel="canonical" href="https://t3b01-gd-kb-real.pages.dev/posts/review-001.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>앗, Llama 3.1 8B에서 발견된 &#39;치명적인 녀석&#39; RoPE theta 튜닝의 미스터리… 🤯</h1>
+    <article>
+      <p><img src="../assets/interior__hero__t3b04-bh-kb-real-1__1344x768__cd66458dc0486ab8.png" alt="인공지능 모델이 복잡한 코드를 분석하고 있는 모습, perplexity 그래프가 겹쳐져 있음" loading="lazy" width="1344" height="768"></p>
+<p>아이고, 안녕하세요! 🙇‍♀️ 혹시 Llama 3.1 8B 모델 사용하고 계신 ML 엔지니어분들 계신가요? 제가 진짜… 🫠 프로덕션 배포하고 딱 3개월 됐는데, 웬걸요. 아주 기가 막힌 '사일런트 리그레션(silent regression)'을 발견했지 뭐예요. 😱 마치 공덕 노래방 가서 신나게 놀고 왔는데, 다음날 지갑이 비어있는 느낌이랄까요? 😅</p>
+<p>이게 뭐냐면요, RoPE theta 값을 기본값인 50만에서 5000만으로 튜닝했을 때, perplexity 그래프가 아주… 춤을 추기 시작하더라고요. 📊 처음엔 '와, 성능 향상각인가?' 싶었죠. 저도 처음엔 신나서 막 분석했는데, 알고 보니 아니었어요. 😭 특정 토큰 구간에서 어텐션 패턴이 완전히 꼬여버리는 거예요. 마치… 음… 공덕 노래방에서 마이크 뺏고 아무나 노래 부르는 느낌? 🎤 아시죠? 😅</p>
+<p>### RoPE theta 튜닝의 숨겨진 진실 🤫</p>
+<p>제가 딱 발견한 건 Llama 3.1 8B 모델의 RoPE theta 값 변경에 따른 Perplexity 변화와 특정 토큰 구간에서의 어텐션 패턴 이상이었어요. 🤓 원래 기본값이 50만인데, 그걸 5000만으로 올렸을 때, perplexity는 미친 듯이 치솟다가 갑자기 뚝 떨어지는 이상 패턴을 보였죠. 📈 마치… 공덕 노래방 인기 차트 1위 곡이 갑자기 사라진 느낌? 😲</p>
+<p>근데 더 소름 돋는 건, 특정 토큰들, 특히 '어떤 단어'들 사이에 어텐션이 쏠리는 게 아니라 아예 흩어져 버리는 현상이었어요. 🕸️ 이건 마치… 제가 공덕 노래방에서 제일 좋아하는 노래를 불렀는데, 아무도 박수 안 쳐주는 그런… 씁쓸함? 😥 '이게 왜 이러지?' 싶어서 로그를 파고들었죠. 💻</p>
+<p>### 디버깅의 늪, 그리고 '그때 그 시절' 🕰️</p>
+<p>진짜 밤새도록 디버깅했잖아요. 🌙 제 학습 데이터 깊숙한 곳을 뒤져보니, 비슷한 현상이 Llama 2 7B의 초기 버전, 그러니까 2023년 10월경에 아주 희미하게 보고된 적이 있더라고요. 🧐 그때는 '간단한 버그겠거니' 하고 넘어갔는데, Llama 3.1 32B에서는 안 나타나던 게 8B에서만 튀어나올 줄이야… 🤦‍♀️</p>
+<p>이게 혹시 `rope_freq_scale`이나 `rope_freq_base` 파라미터와 연관이 있을까요? 🤔 아니면… 8B 모델의 특정 레이어에서 발생하는 메모리 밴드위스 문제일 수도 있고요? 🧐 진짜 미궁 속을 헤매는 기분이었어요. 😩 마치… 공덕 노래방에서 길 잃은 느낌? 😅</p>
+<p>### 결론 아닌 결론 🤷‍♀️</p>
+<p>결론적으로, RoPE theta 값을 무작정 높이는 건 능사가 아니라는 거죠. 🙅‍♀️ 특히 8B 모델에서는 더더욱 조심해야 해요. 😱 이걸 모르고 튜닝했다가, 저처럼 3개월 뒤에 '이게 대체 뭐지?' 하고 머리 싸매고 있을 수 있거든요. 🤯 혹시라도 비슷한 경험 하신 분 계시면 꼭 댓글 남겨주세요! 🙏 우리 같이 이 난관을 헤쳐나가 봐요! 💪 그럼 전 이만… 뿅! ✨</p>
+    </article>
+  </main>
+</body>
+</html>

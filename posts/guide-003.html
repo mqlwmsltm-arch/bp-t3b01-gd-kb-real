@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>앗, Llama 3.1 8B에서 RoPE theta 변경 후 Perplexity가 춤을?! 😵‍💫 50만 vs 5000만, 그리고 희귀 토큰 구간의 비밀 🤫</title>
+  <link rel="canonical" href="t3b01-gd-kb-real/posts/guide-003.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>앗, Llama 3.1 8B에서 RoPE theta 변경 후 Perplexity가 춤을?! 😵‍💫 50만 vs 5000만, 그리고 희귀 토큰 구간의 비밀 🤫</h1>
+    <article>
+      <p><img src="../assets/interior__hero__t1-shiny-room__1344x768__95a76b1d54b62c82.png" alt="컴퓨터 앞에서 고민하는 ML 엔지니어, 복잡한 그래프와 코드 화면" loading="lazy" width="1344" height="768"></p>
+<p>아이고, 안녕하세요! 😊 정말이지, 이놈의 Llama 3.1 8B 때문에 3개월 동안 밤잠을 설치고 있답니다. 프로덕션 환경에 야심 차게 배포했는데, 웬걸요. 3개월쯤 지나니 아주 조용히, 말 그대로 'silent regression'이 찾아온 거예요. 😱 처음엔 뭐가 문제인지 감도 못 잡았죠. 저희 팀 모두 멘붕 상태였답니다. 🤯</p>
+<p>### RoPE theta, 그 미묘한 차이가 불러온 나비효과 🦋</p>
+<p>특히 저희가 주목했던 건 RoPE theta 값이었어요. 기본값인 50만에서 5000만으로 훅 올렸을 때, Perplexity가 요동치는 걸 목격했거든요. 처음엔 '와, 이렇게까지 달라진다고?' 싶어서 신기하기도 했는데, 이게 실제 서비스에 영향을 미치니… 😥 5000만으로 올렸을 때, 특정 토큰 구간에서 어텐션 패턴이 예상치 못한 방향으로 흘러가는 걸 발견했어요. 마치 길을 잃은 아이처럼요. 🥺</p>
+<p>### 희귀 토큰 구간, 숨겨진 보물찾기? 💎</p>
+<p>이게 진짜 복병이었어요. 평소에는 거의 등장하지 않는, 정말 희귀한 토큰들이 엮이는 구간 말이에요. Normal perplexity 측정으로는 잘 드러나지 않던 이상 징후들이, 이 희귀 토큰 구간에서 마치 숨바꼭질하듯 나타나더군요. 🕵️‍♀️ 저희는 이걸 "숨겨진 보물찾기"라고 부르기로 했답니다. (물론, 찾고 나니 보물보다는 골칫덩이였지만요. 😅)</p>
+<p>### 디버깅, 그리고 AGI에 대한 엉뚱한 상상 🤔</p>
+<p>정말이지, 이런 마이너한 지식들이야말로 '딥 다이브'가 필요한 부분인 것 같아요. 🤓 일반적인 검색으로는 절대 나오지 않는 정보들이잖아요. 저희는 이 현상을 해결하기 위해 Llama 3.1 8B의 내부 동작을 샅샅이 파헤쳤답니다. 덕분에 "Llama RoPE theta 튜닝 팁"이나 "LLM 미세 조정 시 주의사항" 같은 키워드로 검색하시는 분들께는 아주 유용한 정보가 될지도 모르겠어요! 😉 어쩌면 이런 디버깅 과정이 AGI(범용 인공지능)로 가는 길이 아닐까, 하는 엉뚱한 생각도 해보았답니다. 🚀</p>
+<p>아무튼, 저희 팀은 이 문제를 해결하기 위해 밤샘 분석을 거듭했고, 결국에는… 음, 그건 다음 이야기에서 살짝 공개해 드릴게요! 😉 다들 궁금하시죠? 💖</p>
+    </article>
+  </main>
+</body>
+</html>
